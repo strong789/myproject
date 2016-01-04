@@ -1,0 +1,11 @@
+.leftContent{
+	text-align: center;
+}
+.leftContent ul{
+	list-style: none;
+	font-size:1.2em ;
+}
+.rightContent{
+	padding-left: 30px;
+	border-left:2px dotted cadetblue;
+}
