@@ -90,7 +90,6 @@ require(['jquery','angular','ngRoute','bootstrap'],function($,angular){
 	app.config(routeConfig);
 	app.controller('ListController',function($scope){
 		$scope.newsList = newsList;
-		
 	});
 	app.controller('AddController',function($scope,$location){
 		$scope.title = '';
@@ -118,6 +117,32 @@ require(['jquery','angular','ngRoute','bootstrap'],function($,angular){
 	app.controller('DetailController',function($scope,$routeParams){
 		 $scope.news = newsList[$routeParams.id-1];
 	});
+	//angular.element学习
+	app.controller('element',function($scope){
+		 angular.element('.ngElement').text('啊哈哈哈');
+		 angular.element('.ngElement').css('background','red');
+	});
+	//angular.copy学习 
+	app.controller('ExampleController',function($scope){
+		 $scope.master= {};
+
+	     $scope.update = function(user) {
+	       // Example with 1 argument
+	       $scope.master= angular.copy(user);
+	     };
+	
+	     $scope.reset = function() {
+	     	$scope.master={};
+	       // Example with 2 arguments将参数1赋值给参数2
+	       angular.copy($scope.master, $scope.user);
+	     };
+	
+//	     $scope.reset();
+	});
+	//ngmaxlength学习
+	app.controller('ExampleController', ['$scope', function($scope) {
+      $scope.maxlength = 5;
+    }]);
  	angular.bootstrap(document, ['routeApp']);//手动启动angularjs
    	return app;
 });

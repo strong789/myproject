@@ -1,12 +1,12 @@
 require.config({
-	baseUrl : 'js',
+//	baseUrl : 'js',
 	paths: {
 //		'app' : 'app',
-		'jquery' : 'jquery',
-		'angular' : 'angular',
-		'ngRoute' : 'angular-route',
-		'vue' : 'vue',
-		'bootstrap' : 'bootstrap/js/bootstrap'
+		'jquery' : 'js/jquery',
+		'angular' : 'js/angular',
+		'ngRoute' : 'js/angular-route',
+		'vue' : 'js/vue',
+		'bootstrap' : 'js/bootstrap/js/bootstrap'
 	},
 	//依赖关系
 	shim : {
